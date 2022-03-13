@@ -6,15 +6,15 @@
   https://fasd.github.io/fasd/
 
   ## Table of Contents 
-  * [Installation](# Installation)
-  * [Usage](# Usage)
-  * [Credits](# Credits)
-  * [Licenses](# Licenses)
-  * [Badge](# Badges)
-  * [Features](# Features)
-  * [Contribution](# Contributions)
-  * [Tests](# Tests)
-  * [Questions](# Questions)
+  * [Installation](# nstallation)
+  * [Usage](#Usage)
+  * [Credits](#Credits)
+  * [Licenses](#Licenses)
+  * [Badge](#Badges)
+  * [Features](#Features)
+  * [Contribution](#Contributions)
+  * [Tests](#Tests)
+  * [Questions](#Questions)
    
   ## Installation
   asdf
