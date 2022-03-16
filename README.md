@@ -1,7 +1,7 @@
 # Balls
   ## Description
   Naahhhhhhhhh
-[![LICENSE]https://img.shields.io/badge/license-mit-blue.svg]
+[![License](https://img.shields.io/badge/license-mit-blue.svg)]
   ## Live URL
   https://fasd.github.io/fasd/
 
