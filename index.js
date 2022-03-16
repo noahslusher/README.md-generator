@@ -50,7 +50,7 @@ const questions = [
   {
     type: 'input',
     name: 'usage',
-    message: 'Provide instructions and examples for use. If needed, add screenshots by adding the images to an "assets/images" folder in your repository and upload the photo. Use a relative filepath to add it to your README using the syntax "```md![alt text](assts/images/screenshot.png)```"'
+    message: 'Provide instructions and examples for use. If needed, add screenshots by adding the images to an "assets/images" folder in your repository and upload the photo. Use a relative filepath to add it to your README using the syntax "```md![alt text](assets/images/screenshot.png)```"'
   },
   {
     type: 'input',
@@ -61,7 +61,7 @@ const questions = [
     type: 'list',
     name: 'license',
     message: 'Choose a license if you would like. refer to "[https://choosealicense.com/](https://choosealicense.com/)" for help.',
-    choices: ['MIT', 'none']
+    choices: ['mit', 'apache-2.0', 'isc', 'gpl-3.0', 'none']
   },
   {
     type: 'confirm',
@@ -69,18 +69,18 @@ const questions = [
     message: 'Would you like to add a badge',
     default: false
   },
-  {
-    type: 'input',
-    name: 'badge',
-    message: 'Please add the badge you would like to use',
-    when: ({ confirmBadge }) => {
-      if (confirmBadge) {
-        return true
-      } else {
-        return false
-      }
-    }
-  },
+  // {
+  //   type: 'input',
+  //   name: 'badge',
+  //   message: 'Please add the badge you would like to use',
+  //   when: ({ confirmBadge }) => {
+  //     if (confirmBadge) {
+  //       return true
+  //     } else {
+  //       return false
+  //     }
+  //   }
+  // },
   {
     type: 'input',
     name: 'features',
@@ -90,6 +90,7 @@ const questions = [
     type: 'input',
     name: 'contribution',
     message: 'If you would like others to contribute, please leave guidelines here for how to do so.',
+    default: 'If you would like to contribute please add repo to your GitHub account and create a pull request'
   },
   {
     type: 'input',
@@ -105,12 +106,33 @@ const questions = [
   {
     type: 'input',
     name: 'username',
-    message: 'What is your GitHub username?',
+    message: 'What is your GitHub username?(Required)',
+    validate: username => {
+    if (username) {
+      return true
+    } else {
+      console.log('Please enter a GitHub username')
+      return false 
+    }
+  }
   },
   {
     type: 'input',
     name: 'repoName',
-    message: 'What is your GitHub repository name?',
+    message: 'What is your GitHub repository name?(Required)',
+    validate: repoName => {
+      if (repoName) {
+        return true
+      } else {
+        console.log('please enter a repo name')
+        return false
+      }
+    }
+  },
+  {
+    type: 'input',
+    name: 'year',
+    message: 'What is the current year?',
   },
 ]
 

@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license !== 'none') {
-    return `https://img.shields.io/badge/license-${license}-blue.svg`
+    return `![License](https://img.shields.io/badge/license-${license}-blue.svg)`
   } else return ""
 }
 
@@ -18,7 +18,7 @@ function renderLicenseLink(license) {
 //If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== 'none') {
-    return `Copyright [2022] [${data.username}]`
+    return `Copyright ${year} [${data.username}]`
   } else return ""
 }
 
@@ -53,10 +53,8 @@ function generateMarkdown(data) {
   ${data.credits}
 
   ## Licenses
+  ${renderLicenseSection(data.license)}
   This product is licensed under the ${data.license} license
-  
-  ## Badges 
-  ${data.badge}
   
   ## Features
   ${data.features}
