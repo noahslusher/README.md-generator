@@ -18,7 +18,7 @@ function renderLicenseLink(license) {
 //If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== 'none') {
-    return `Copyright ${year} [${data.username}]`
+    //return `Copyright ${data.year} [${data.username}]`
   } else return ""
 }
 
