@@ -26,7 +26,7 @@ const questions = [
     type: 'confirm',
     name: 'confirmContents',
     message: 'Would you like to add a table of contents',
-    default: false
+    default: true
   },
   {
     type: 'checkbox',

@@ -1,17 +1,16 @@
-# asdf
+# README.md Generator
   ![License](https://img.shields.io/badge/license-mit-blue.svg)
   ## Description
-  asdf
+  I built this project to learn how to navigate Node.js. It allowed me to get familiar using JavaScript to develop back-end applications. I also learned how to use the inquirer package from Node to take in user input and generate a file.
 
   ## Live URL
-  https://asdf.github.io/asdf/
+  https://noahslusher.github.io/README.md-generator/
 
   ## Table of Contents 
   * [Installation](#Installation)
   * [Usage](#Usage)
   * [Credits](#Credits)
   * [Licenses](#Licenses)
-  undefined
   * [Features](#Features)
   * [Contribution](#Contributions)
   * [Tests](#Tests)
@@ -20,19 +19,10 @@
   ## Installation
   npm i
   
-  ## Usage 
-  
-
-  ## Credits 
-  
-
   ## Licenses
-  undefined
+  Copyright 2022 [noahslusher]
   This product is licensed under the mit license
-  
-  ## Features
-  
-  
+
   ## Contributions
   Contributors: If you would like to contribute please add repo to your GitHub account and create a pull request
   
@@ -40,6 +30,6 @@
   npm test
 
   ## Questions
-  Profile Link: https://github.com/asdf
-  For any questions or concerns, please contact  with any questions.
+  Profile Link: https://github.com/noahslusher
+  For any questions or concerns, please contact slushern42@gmail.com with any questions.
 

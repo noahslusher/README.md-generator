@@ -16,9 +16,9 @@ function renderLicenseLink(license) {
 
 //TODO: Create a function that returns the license section of README
 //If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if (license !== 'none') {
-    //return `Copyright ${data.year} [${data.username}]`
+function renderLicenseSection(data) {
+  if (data.license !== 'none') {
+    return `Copyright ${data.year} [${data.username}]`
   } else return ""
 }
 
@@ -37,7 +37,6 @@ function generateMarkdown(data) {
   * [Usage](#Usage)
   * [Credits](#Credits)
   ${renderLicenseLink(data.license)}
-  ${renderLicenseSection(data.license)}
   * [Features](#Features)
   * [Contribution](#Contributions)
   * [Tests](#Tests)
@@ -53,7 +52,7 @@ function generateMarkdown(data) {
   ${data.credits}
 
   ## Licenses
-  ${renderLicenseSection(data.license)}
+  ${renderLicenseSection(data)}
   This product is licensed under the ${data.license} license
   
   ## Features
