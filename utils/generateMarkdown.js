@@ -1,6 +1,3 @@
-// TODO: make the readme generate if ToC is not generated. Create for loop for ToC. fix the undefined issue when some contents are not added.
-
-
 //TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -26,16 +23,6 @@ function renderLicenseSection(data) {
   } else return ""
 }
 
-
-// Functions to populate user input into Table of Contents based on choices chosen
-function renderToc(data) {
-  if (data.confirmContents) {
-    return `## Table of Contents`
-  } else {
-    return ""
-  }
-}
-
 function tableOfContents(data) {
   let tableOfContents = ""
   if (data.contents) {
@@ -47,76 +34,6 @@ function tableOfContents(data) {
     return ""
   }
 }
-
-
-
-
-// function installation(data) {
-//   if (data.contents[0]) {
-//     return `* [${data.contents[0]}](#${data.contents[0]})`
-//   } else {
-//     return ""
-//   }
-// }
-// function usage(data) {
-//   if (data.contents[1]) {
-//     return `* [${data.contents[1]}](#${data.contents[1]})`
-//   } else {
-//     return ""
-//   }
-// }
-// function credits(data) {
-//   if (data.contents[2]) {
-//     return `* [${data.contents[2]}](#${data.contents[2]})`
-//   } else {
-//     return ""
-//   }
-// }
-
-// function licenses(data) {
-//   if (data.contents[3]) {
-//     return `* [${data.contents[3]}](#${data.contents[3]})`
-//   } else {
-//     return ""
-//   }
-// }
-// function badge(data) {
-//   if (data.contents[4]) {
-//     return `* [${data.contents[4]}](#${data.contents[4]})`
-//   } else {
-//     return ""
-//   }
-// }
-// function features(data) {
-//   if (data.contents[5]) {
-//     return `* [${data.contents[5]}](#${data.contents[5]})`
-//   } else {
-//     return ""
-//   }
-// }
-// function contribution(data) {
-//   if (data.contents[6]) {
-//     return `* [${data.contents[6]}](#${data.contents[6]})`
-//   } else {
-//     return ""
-//   }
-// }
-// function tests(data) {
-//   if (data.contents[7]) {
-//     return `* [${data.contents[7]}](#${data.contents[7]})`
-//   } else {
-//     return ""
-//   }
-// }
-// function questions(data) {
-//   if (data.contents[8]) {
-//     return `* [${data.contents[8]}](#${data.contents[8]})`
-//   } else {
-//     return ""
-//   }
-// }
-
-
 
 
 // functions to populate readme section titles if user selected them in table of contents
@@ -225,58 +142,9 @@ ${features(data)}
 ${contribution(data)}
 ${tests(data)}
 ${questions(data)}
-
-
 `;
 }
 
 module.exports = generateMarkdown;
 
-
-// ${installationTitle(data)}
-// ${usageTitle(data)}
-// ${creditsTitle(data)} 
-
-// ${licensesTitle(data)}
-// ${badgeTitle(data)}
-// ${featuresTitle(data)}
-// ${contributionTitle(data)}
-// ${testsTitle(data)}
-// ${questionsTitle(data)}
-
-
-
-
-
-
-
-
-
-
-
-//displayTitle = () => {
-  // write a function that will only display the table of contents selected in the user prompt
-//}
-
-
-
-// *[${data.contents.choices[0]}](https://github.com/${data.username}/${data.repoName}#${data.contents.choices[0]})
-// *[${data.contents.choices[1]}](https://github.com/${data.username}/${data.repoName}#${data.contents.choices[1]})
-// *[${data.contents.choices[2]}](https://github.com/${data.username}/${data.repoName}#${data.contents.choices[2]})
-// *[${data.contents.choices[3]}](https://github.com/${data.username}/${data.repoName}#${data.contents.choices[3]})
-// *[${data.contents.choices[4]}](https://github.com/${data.username}/${data.repoName}#${data.contents.choices[4]})
-// *[${data.contents.choices[5]}](https://github.com/${data.username}/${data.repoName}#${data.contents.choices[5]})
-// *[${data.contents.choices[6]}](https://github.com/${data.username}/${data.repoName}#${data.contents.choices[6]})
-// *[${data.contents.choices[7]}](https://github.com/${data.username}/${data.repoName}#${data.contents.choices[7]})
-// *[${data.contents.choices[8]}](https://github.com/${data.username}/${data.repoName}#${data.contents.choices[8]})
-
-
-// * [${data.contents[1]}](#${data.contents[1]})
-// * [${data.contents[2]}](#${data.contents[2]})
-// * [${data.contents[3]}](#${data.contents[3]})
-// * [${data.contents[4]}](#${data.contents[4]})
-// * [${data.contents[5]}](#${data.contents[5]})
-// * [${data.contents[6]}](#${data.contents[6]})
-// * [${data.contents[7]}](#${data.contents[7]})
-// * [${data.contents[8]}](#${data.contents[8]})
 
