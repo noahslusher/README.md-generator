@@ -58,6 +58,7 @@ const questions = [
     type: 'input',
     name: 'usage',
     message: 'Provide instructions and examples for use. If needed, add screenshots by adding the images to an "assets/images" folder in your repository and upload the photo. Use a relative filepath to add it to your README using the syntax "```md![alt text](assets/images/screenshot.png)```"',
+    default: 'Please contact me',
     when: ({contents}) => {
       if (contents[1]) {
         return true
@@ -70,6 +71,7 @@ const questions = [
     type: 'input',
     name: 'credits',
     message: 'List any collaborators with links to their GitHub profiles. If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section. If you followed tutorials, include links to those here as well.',
+    default: 'None',
     when: ({contents}) => {
       if (contents[2]) {
         return true
@@ -101,6 +103,7 @@ const questions = [
     type: 'input',
     name: 'badge',
     message: 'Please add the badge you would like to use',
+    default: 'None',
     when: ({contents}) => {
       if (contents[4]) {
         return true
@@ -120,6 +123,7 @@ const questions = [
     type: 'input',
     name: 'features',
     message: 'List your features here if you would like to.',
+    default: 'None',
     when: ({contents}) => {
       if (contents[5]) {
         return true

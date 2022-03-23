@@ -11,6 +11,7 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
+// Fulfilled this in for loop
 function renderLicenseLink(license) {
   if (license !== 'none') {
     return `* [Licenses](#Licenses)`
@@ -35,11 +36,81 @@ function renderToc(data) {
   }
 }
 
-// function tableOfContents(data) {
-//   if (data.contents) {
-//     for (const contents of data.contents) {
-//       console.log(`* [${contents}](#${contents})`)
-//     }
+function tableOfContents(data) {
+  let tableOfContents = ""
+  if (data.contents) {
+    for (const contents of data.contents) {
+      tableOfContents += `* [${contents}](#${contents})\n`
+    }
+    return tableOfContents
+  } else {
+    return ""
+  }
+}
+
+
+
+
+// function installation(data) {
+//   if (data.contents[0]) {
+//     return `* [${data.contents[0]}](#${data.contents[0]})`
+//   } else {
+//     return ""
+//   }
+// }
+// function usage(data) {
+//   if (data.contents[1]) {
+//     return `* [${data.contents[1]}](#${data.contents[1]})`
+//   } else {
+//     return ""
+//   }
+// }
+// function credits(data) {
+//   if (data.contents[2]) {
+//     return `* [${data.contents[2]}](#${data.contents[2]})`
+//   } else {
+//     return ""
+//   }
+// }
+
+// function licenses(data) {
+//   if (data.contents[3]) {
+//     return `* [${data.contents[3]}](#${data.contents[3]})`
+//   } else {
+//     return ""
+//   }
+// }
+// function badge(data) {
+//   if (data.contents[4]) {
+//     return `* [${data.contents[4]}](#${data.contents[4]})`
+//   } else {
+//     return ""
+//   }
+// }
+// function features(data) {
+//   if (data.contents[5]) {
+//     return `* [${data.contents[5]}](#${data.contents[5]})`
+//   } else {
+//     return ""
+//   }
+// }
+// function contribution(data) {
+//   if (data.contents[6]) {
+//     return `* [${data.contents[6]}](#${data.contents[6]})`
+//   } else {
+//     return ""
+//   }
+// }
+// function tests(data) {
+//   if (data.contents[7]) {
+//     return `* [${data.contents[7]}](#${data.contents[7]})`
+//   } else {
+//     return ""
+//   }
+// }
+// function questions(data) {
+//   if (data.contents[8]) {
+//     return `* [${data.contents[8]}](#${data.contents[8]})`
 //   } else {
 //     return ""
 //   }
@@ -48,135 +119,85 @@ function renderToc(data) {
 
 
 
+// functions to populate readme section titles if user selected them in table of contents
 function installation(data) {
-  if (data.contents[0]) {
-    return `* [${data.contents[0]}](#${data.contents[0]})`
+  if (data.installation) {
+    return `## Installation
+  ${data.installation}
+  `
   } else {
     return ""
   }
 }
 function usage(data) {
-  if (data.contents[1]) {
-    return `* [${data.contents[1]}](#${data.contents[1]})`
+  if (data.usage) {
+    return `## Usage
+  ${data.usage}
+  `
   } else {
     return ""
   }
 }
 function credits(data) {
-  if (data.contents[2]) {
-    return `* [${data.contents[2]}](#${data.contents[2]})`
+  if (data.credits) {
+    return `## Credits
+  ${data.credits}
+  `
   } else {
     return ""
   }
 }
 
-function licenses(data) {
-  if (data.contents[3]) {
-    return `* [${data.contents[3]}](#${data.contents[3]})`
+function license(data) {
+  if (data.license) {
+    return `## License
+  ${renderLicenseSection(data)}
+  `
   } else {
     return ""
   }
 }
 function badge(data) {
-  if (data.contents[4]) {
-    return `* [${data.contents[4]}](#${data.contents[4]})`
+  if (data.badge) {
+    return `## Badge
+  ${data.badge}
+  `
   } else {
     return ""
   }
 }
 function features(data) {
-  if (data.contents[5]) {
-    return `* [${data.contents[5]}](#${data.contents[5]})`
+  if (data.features) {
+    return `## Features
+  ${data.features}
+  `
   } else {
     return ""
   }
 }
 function contribution(data) {
-  if (data.contents[6]) {
-    return `* [${data.contents[6]}](#${data.contents[6]})`
+  if (data.contribution) {
+    return `## Contribution
+  ${data.contribution}
+  `
   } else {
     return ""
   }
 }
 function tests(data) {
-  if (data.contents[7]) {
-    return `* [${data.contents[7]}](#${data.contents[7]})`
+  if (data.tests) {
+    return `## Tests
+  ${data.tests}
+  `
   } else {
     return ""
   }
 }
 function questions(data) {
-  if (data.contents[8]) {
-    return `* [${data.contents[8]}](#${data.contents[8]})`
-  } else {
-    return ""
-  }
-}
-
-
-
-
-// functions to populate readme section titles if user selected them in table of contents
-function installationTitle(data) {
-  if (data.contents[0]) {
-    return `## ${data.contents[0]}`
-  } else {
-    return ""
-  }
-}
-function usageTitle(data) {
-  if (data.contents[1]) {
-    return `## ${data.contents[1]}`
-  } else {
-    return ""
-  }
-}
-function creditsTitle(data) {
-  if (data.contents[2]) {
-    return `## ${data.contents[2]}`
-  } else {
-    return ""
-  }
-}
-
-function licensesTitle(data) {
-  if (data.contents[3]) {
-    return `## ${data.contents[3]}`
-  } else {
-    return ""
-  }
-}
-function badgeTitle(data) {
-  if (data.contents[4]) {
-    return `## ${data.contents[4]}`
-  } else {
-    return ""
-  }
-}
-function featuresTitle(data) {
-  if (data.contents[5]) {
-    return `## ${data.contents[5]}`
-  } else {
-    return ""
-  }
-}
-function contributionTitle(data) {
-  if (data.contents[6]) {
-    return `## ${data.contents[6]}`
-  } else {
-    return ""
-  }
-}
-function testsTitle(data) {
-  if (data.contents[7]) {
-    return `## ${data.contents[7]}`
-  } else {
-    return ""
-  }
-}
-function questionsTitle(data) {
-  if (data.contents[8]) {
-    return `## ${data.contents[8]}`
+  if (data.questions) {
+    return `## Questions
+  Profile Link: https://github.com/${data.username}
+  For any questions or concerns, please contact ${data.questions} with any questions.`
   } else {
     return ""
   }
@@ -192,45 +213,19 @@ function generateMarkdown(data) {
   ## Live URL
   https://${data.username}.github.io/${data.repoName}/
 
-  ${renderToc(data)}
-  ${installation(data)}
-  ${usage(data)}
-  ${credits(data)}  
-  ${licenses(data)}
-  ${badge(data)}
-  ${features(data)}
-  ${contribution(data)}
-  ${tests(data)}
-  ${questions(data)}
+  ## Table of Contents
+${tableOfContents(data)}
 
-  ## Installation
-  ${data.installation}
-  
-  ## Usage
-  ${data.usage}
+${installation(data)}
+${usage(data)}
+${credits(data)}
+${license(data)}
+${badge(data)}
+${features(data)}
+${contribution(data)}
+${tests(data)}
+${questions(data)}
 
-  ## Credits
-  ${data.credits}
-
-  ## License
-  ${renderLicenseSection(data)}
-  This product is licensed under the ${data.license} license
-
-  ## Badges
-  ${data.badge}
-  
-  ## Features
-  ${data.features}
-  
-  ## Contributions
-  Contributors: ${data.contribution}
-  
-  ## Tests
-  ${data.tests}
-
-  ## Questions
-  Profile Link: https://github.com/${data.username}
-  For any questions or concerns, please contact ${data.questions} with any questions.
 
 `;
 }
