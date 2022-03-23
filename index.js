@@ -22,24 +22,24 @@ const questions = [
     name: 'description',
     message: 'Please provide a short description for your project. What was the motivation? Why did you build this project? What problem does it solve? What did you learn?'
   },
-  {
-    type: 'confirm',
-    name: 'confirmContents',
-    message: 'Would you like to add a table of contents',
-    default: true
-  },
+  // {
+  //   type: 'confirm',
+  //   name: 'confirmContents',
+  //   message: 'Would you like to add a table of contents',
+  //   default: true
+  // },
   {
     type: 'checkbox',
     name: 'contents',
     message: 'Please check the boxes of the headers you would like to include in your Table of Contents',
     choices: ['Installation', 'Usage', 'Credits', 'Licenses', 'Badge', 'Features', 'Contribution', 'Tests', 'Questions'],
-    when: ({ confirmContents }) => {
-      if (confirmContents) {
-        return true;
-      } else {
-        return false
-      }
-    }
+    // when: ({ confirmContents }) => {
+    //   if (confirmContents) {
+    //     return true;
+    //   } else {
+        
+    //   }
+    // }
   },
   {
     type: 'input',

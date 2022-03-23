@@ -34,6 +34,20 @@ function renderToc(data) {
     return ""
   }
 }
+
+// function tableOfContents(data) {
+//   if (data.contents) {
+//     for (const contents of data.contents) {
+//       console.log(`* [${contents}](#${contents})`)
+//     }
+//   } else {
+//     return ""
+//   }
+// }
+
+
+
+
 function installation(data) {
   if (data.contents[0]) {
     return `* [${data.contents[0]}](#${data.contents[0]})`
@@ -103,70 +117,70 @@ function questions(data) {
 
 
 // functions to populate readme section titles if user selected them in table of contents
-// function installationTitle(data) {
-//   if (data.contents[0]) {
-//     return `## ${data.contents[0]}`
-//   } else {
-//     return ""
-//   }
-// }
-// function usageTitle(data) {
-//   if (data.contents[1]) {
-//     return `## ${data.contents[1]}`
-//   } else {
-//     return ""
-//   }
-// }
-// function creditsTitle(data) {
-//   if (data.contents[2]) {
-//     return `## ${data.contents[2]}`
-//   } else {
-//     return ""
-//   }
-// }
+function installationTitle(data) {
+  if (data.contents[0]) {
+    return `## ${data.contents[0]}`
+  } else {
+    return ""
+  }
+}
+function usageTitle(data) {
+  if (data.contents[1]) {
+    return `## ${data.contents[1]}`
+  } else {
+    return ""
+  }
+}
+function creditsTitle(data) {
+  if (data.contents[2]) {
+    return `## ${data.contents[2]}`
+  } else {
+    return ""
+  }
+}
 
-// function licensesTitle(data) {
-//   if (data.contents[3]) {
-//     return `## ${data.contents[3]}`
-//   } else {
-//     return ""
-//   }
-// }
-// function badgeTitle(data) {
-//   if (data.contents[4]) {
-//     return `## ${data.contents[4]}`
-//   } else {
-//     return ""
-//   }
-// }
-// function featuresTitle(data) {
-//   if (data.contents[5]) {
-//     return `## ${data.contents[5]}`
-//   } else {
-//     return ""
-//   }
-// }
-// function contributionTitle(data) {
-//   if (data.contents[6]) {
-//     return `## ${data.contents[6]}`
-//   } else {
-//     return ""
-//   }
-// }
-// function testsTitle(data) {
-//   if (data.contents[7]) {
-//     return `## ${data.contents[7]}`
-//   } else {
-//     return ""
-//   }
-// }
-// function questionsTitle(data) {
-//   if (data.contents[8]) {
-//     return `## ${data.contents[8]}`
-//   } else {
-//     return ""
-//   }
-// }
+function licensesTitle(data) {
+  if (data.contents[3]) {
+    return `## ${data.contents[3]}`
+  } else {
+    return ""
+  }
+}
+function badgeTitle(data) {
+  if (data.contents[4]) {
+    return `## ${data.contents[4]}`
+  } else {
+    return ""
+  }
+}
+function featuresTitle(data) {
+  if (data.contents[5]) {
+    return `## ${data.contents[5]}`
+  } else {
+    return ""
+  }
+}
+function contributionTitle(data) {
+  if (data.contents[6]) {
+    return `## ${data.contents[6]}`
+  } else {
+    return ""
+  }
+}
+function testsTitle(data) {
+  if (data.contents[7]) {
+    return `## ${data.contents[7]}`
+  } else {
+    return ""
+  }
+}
+function questionsTitle(data) {
+  if (data.contents[8]) {
+    return `## ${data.contents[8]}`
+  } else {
+    return ""
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -181,14 +195,14 @@ function generateMarkdown(data) {
   ${renderToc(data)}
   ${installation(data)}
   ${usage(data)}
-  ${credits(data)}
+  ${credits(data)}  
   ${licenses(data)}
   ${badge(data)}
   ${features(data)}
   ${contribution(data)}
   ${tests(data)}
   ${questions(data)}
- 
+
   ## Installation
   ${data.installation}
   
@@ -270,3 +284,4 @@ module.exports = generateMarkdown;
 // * [${data.contents[6]}](#${data.contents[6]})
 // * [${data.contents[7]}](#${data.contents[7]})
 // * [${data.contents[8]}](#${data.contents[8]})
+
