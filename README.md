@@ -1,10 +1,10 @@
-# asdf
+# README.md Generator
   ![License](https://img.shields.io/badge/license-mit-blue.svg)
   ## Description
-  asdf
+  I created this application to better understand Node.js. This application helped me utilize my knowledge of JavaScript to create a command line application. This project also helped me understand node package manager and allowed me to become familiar with Inquirer. It allows the user to create a README file from prompts that are asked from the command line.
 
   ## Live URL
-  https://asdf.github.io/asdf/
+  https://noahslusher.github.io/README.md-generator/
 
   ## Table of Contents
 * [Installation](#Installation)
@@ -13,19 +13,23 @@
 * [Licenses](#Licenses)
 * [Badge](#Badge)
 * [Features](#Features)
+* [Contribution](#Contribution)
+* [Tests](#Tests)
+* [Questions](#Questions)
 
 
 ## Installation
-  npm i
+  User must have node installed and it requires the inquirer dependency.
   
 ## Usage
-  Please contact me
+  Call the application from the command line by navigating to the repo and calling 'node index.js'
   
 ## Credits
   None
   
 ## License
-  Copyright asdf [asdf]
+  Copyright 2022 [noahslusher]
+  This product is licensed under the mit license
   
 ## Badge
   None
@@ -40,5 +44,5 @@
   npm test
   
 ## Questions
-  Profile Link: https://github.com/asdf
-  For any questions or concerns, please contact asdf with any questions.
+  Profile Link: https://github.com/noahslusher
+  For any questions or concerns, please contact slushern42@gmail.com with any questions.
