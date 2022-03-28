@@ -43,7 +43,6 @@ I created this application to better understand Node.js. This application helped
   
 ## Questions
   Profile Link: https://github.com/noahslusher
-  For any questions or concerns, please contact slu
-shern42@gmail.com with any questions.
+  For any questions or concerns, please contact slushern42@gmail.com with any questions.
 
 [Readme Screen Record.mov.zip](https://github.com/noahslusher/README.md-generator/files/8358811/Readme.Screen.Record.mov.zip)
