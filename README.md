@@ -27,7 +27,7 @@ I created this application to better understand Node.js. This application helped
 
 ## License
   Copyright 2022 [noahslusher]
-    This product is licensed under the mit license
+  This product is licensed under the mit license
   
 ## Badge
   None
