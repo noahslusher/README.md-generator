@@ -20,6 +20,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(data) {
   if (data.license !== 'none') {
     return `Copyright ${data.year} [${data.username}]
+  
     This product is licensed under the ${data.license} license`
   } else return ""
 }
