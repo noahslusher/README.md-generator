@@ -1,7 +1,7 @@
-# README.md Generator
+# Readme.md Generator
   ![License](https://img.shields.io/badge/license-mit-blue.svg)
   ## Description
-  I created this application to better understand Node.js. This application helped me utilize my knowledge of JavaScript to create a command line application. This project also helped me understand node package manager and allowed me to become familiar with Inquirer. It allows the user to create a README file from prompts that are asked from the command line.
+     I created this application to better understand Node.js. This application helped me utilize my knowledge of JavaScript to create a command line application. This project also helped me understand node package manager and allowed me to become familiar with Inquirer. It allows the user to create a README file from prompts that are asked from the command line.
 
   ## Live URL
   https://noahslusher.github.io/README.md-generator/
@@ -19,17 +19,15 @@
 
 
 ## Installation
-  User must have node installed and it requires the inquirer dependency.
+  User must have Node.js installed and it uses the Inquirer Dependency.
   
 ## Usage
-  Call the application from the command line by navigating to the repo and calling 'node index.js'
+  Navigate to repo directory on the command line and enter "node index.js"
   
-## Credits
-  None
-  
+
 ## License
   Copyright 2022 [noahslusher]
-  This product is licensed under the mit license
+    This product is licensed under the mit license
   
 ## Badge
   None
